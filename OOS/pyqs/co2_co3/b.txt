@@ -1,0 +1,5 @@
+abc1d
+abdfe14
+abbb2bbb
+23vvv
+Total words containing at least one digit: 4

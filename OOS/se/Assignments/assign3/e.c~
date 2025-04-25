@@ -43,7 +43,7 @@ void step_state(enum events event) {
 }
 int main(void) {
     int cntr =0 ;
-    enum events events_arr[] = { START_LOOPING, PRINT_HELLO, PRINT_HELLO, PRINT_HELLO, PRINT_HELLO, PRINT_HELLO,PRINT_HELLO,PRINT_HELLO,STOP_LOOPING,PRINT_HELLO,PRINT_HELLO,STOP_LOOPING};
+    events events_arr[] = { START_LOOPING, PRINT_HELLO, PRINT_HELLO, PRINT_HELLO, PRINT_HELLO, PRINT_HELLO,PRINT_HELLO,PRINT_HELLO,STOP_LOOPING,PRINT_HELLO,PRINT_HELLO,STOP_LOOPING};
     while(events_arr[cntr] != STOP_LOOPING)
     {
         step_state(events_arr[cntr]);
