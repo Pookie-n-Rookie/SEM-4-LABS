@@ -1,23 +1,18 @@
 import java.util.*;
 
-// class pt extends Thread {
-//   public void run(){
-//     System.out.println(getPriority());
-//     setPriority(8);  // Sets the priority of this thread (not the main one)
-//     System.out.println(getPriority());
-//   }
-// }
 
-// class tt {
-//   public static void main(String arg[]){
-//     Thread t = Thread.currentThread();
-//     System.out.println(t);
-//     System.out.println(t.getName());
-//     System.out.println(t.getPriority());
 
-//     new pt().start(); // starts a new thread, which runs pt.run()
-//   }
-// }
+class tt {
+  public static void main(String arg[]){
+    Thread t = Thread.currentThread();
+    System.out.println(t);
+    System.out.println(t.getName());
+    System.out.println(t.getPriority());
+    System.out.println(t.getState());
+    System.out.println(t.getPriority());
+
+  }
+}
 // class tt {
 //   public static void main(String arg[]){
 //     Thread t = Thread.currentThread();
@@ -214,48 +209,48 @@ import java.util.*;
 
 // import java.util.Date;
 
-class m1 extends Thread {
-  private boolean st = true;
+// class m1 extends Thread {
+//   private boolean st = true;
 
-  public synchronized void psuspend() {
-    st = false;
-  }
+//   public synchronized void psuspend() {
+//     st = false;
+//   }
 
-  public synchronized void ppresume() {
-    st = true;
-    notify();
-  }
+//   public synchronized void ppresume() {
+//     st = true;
+//     notify();
+//   }
 
-  public void run() {
-    try {
-      while (true) {
-        synchronized (this) {
-          while (!st) {
-            System.out.println("suspended");
-            wait(); // Wait until resume is called
-          }
-        }
+//   public void run() {
+//     try {
+//       while (true) {
+//         synchronized (this) {
+//           while (!st) {
+//             System.out.println("suspended");
+//             wait(); // Wait until resume is called
+//           }
+//         }
 
-        // Print the date and sleep for 1 second when not suspended
-        System.out.println(new Date());
-        Thread.sleep(500);
-      }
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
-}
+//         // Print the date and sleep for 1 second when not suspended
+//         System.out.println(new Date());
+//         Thread.sleep(500);
+//       }
+//     } catch (Exception e) {
+//       e.printStackTrace();
+//     }
+//   }
+// }
 
-class SuspendResume {
-  public static void main(String[] args) throws Exception {
-    m1 ob = new m1();
-    ob.start();
+// class SuspendResume {
+//   public static void main(String[] args) throws Exception {
+//     m1 ob = new m1();
+//     ob.start();
 
-    while (true) {
-      // Thread.sleep(500); // Suspend after 5 seconds
-      ob.psuspend();
-      // Thread.sleep(500); // Stay suspended for 3 seconds
-      ob.ppresume();
-    }
-  }
-}
+//     while (true) {
+//       // Thread.sleep(500); // Suspend after 5 seconds
+//       ob.psuspend();
+//       // Thread.sleep(500); // Stay suspended for 3 seconds
+//       ob.ppresume();
+//     }
+//   }
+// }

@@ -1,9 +1,9 @@
 import java.util.*;
 
 class st {
-  void change(char a[],String b){
+  void change(String a[],String b){
     for(int i=0;i<a.length;i++){
-      a[i]='a';
+      a[i]="aaa";
     }
     b+="JU";
   }
@@ -51,15 +51,13 @@ class st {
   //   }
   // }
     st s=new st();
-    char arr[]=new char[5];
+    String arr[]=new String[5];
     String str=new String("hi");
-    String str1=new String("hi");
-    str1+="JU";
+    str+=str;
     s.change(arr,str);
     for(int i=0;i<arr.length;i++){
       System.out.print(" "+arr[i]+" ");
     }
-    System.out.println(str+ " "+str1);
-    
+    System.out.println(str);
 }
 }

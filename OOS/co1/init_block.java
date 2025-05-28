@@ -92,35 +92,36 @@ import java.io.*;
 //     }
 // }
 
-// class max{
-//     public static void main(String[] args) {
-//         main("OOS");
-//     }
-//     public static void main(String args1,String args2) {
-//         System.out.println(args1+args2);
+class max{
+    public static void main(String args1) {
+        main("oos1","oos2");
+        System.out.println(args1);
+    }
+    public static void main(String[] args) {
+        main("OOS");
+    }
+    public static void main(String args1,String args2) {
+        System.out.println(args1+args2);
         
         
+    }
+    
+}
+// abstract class s1{
+//     s1(){
+//         System.out.println("abstract class");
 //     }
-//     public static void main(String args1) {
-//         main("oos1","oos2");
-//         System.out.println(args1);
+//     abstract void show();
+// }
+// class s2 extends s1{
+//     void show(){
+//         System.out.println("from s2");
 //     }
 // }
-abstract class s1{
-    s1(){
-        System.out.println("abstract class");
-    }
-    abstract void show();
-}
-class s2 extends s1{
-    void show(){
-        System.out.println("from s2");
-    }
-}
 
-class max{
-    public static void main(String[] args) {
-        s1 t=new s2();
-        t.show();
-    }
-}
+// class max{
+//     public static void main(String[] args) {
+//         s1 t=new s2();
+//         t.show();
+//     }
+// }
